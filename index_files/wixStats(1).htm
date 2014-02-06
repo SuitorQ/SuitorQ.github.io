@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<!-- saved from url=(0383)http://server2.web-stat.com/wixStats.pl?cacheKiller=13916834277440&compId=TPWdgt0-bnu&deviceType=desktop&instance=oJh0cQP2tyxpzh8wSeprWz8gsrMY8TzlwkzkHvV4gNI.eyJpbnN0YW5jZUlkIjoiMTMyMDNmMzEtYmQxNi05YmQ3LTgyM2ItMTI5MDk4NmNkMDljIiwic2lnbkRhdGUiOiIyMDE0LTAyLTA2VDEwOjQyOjI1LjgwNFoiLCJpcEFuZFBvcnQiOiI2Ny4xOTMuMjEyLjE4MC81MDIzOCIsImRlbW9Nb2RlIjpmYWxzZX0&locale=en&viewMode=site&width=210 -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<title></title>
+<style></style>
+<script type="text/javascript" async="" src="ga(1).js"></script><script type="text/javascript" src="Wix.js"></script>
+
+<script type="text/javascript">
+ 
+   Wix.addEventListener(Wix.Events.PAGE_NAVIGATION_CHANGE, function() {
+      window.location.reload();
+   });
+
+
+</script>
+</head>
+<body style="">
+<span id="wtshandle"></span><span id="wts"><script type="text/javascript" async="" src="log6.js"></script><script type="text/javascript" src="count6.pl"></script><span id="wtscount"><a href="http://www.web-stat.com/stats/checkstats.pl?PublicID=profdecube" target="new"><img src="draw_counter.pl" width="184" height="31" border="0"></a></span></span>
+
+<script type="text/javascript">
+
+function loadData(loop,wtsh,callback) {
+
+   loop++;
+
+   Wix.getSiteInfo( function(siteInfo) {
+
+      wtsh['url'] = siteInfo.url;
+      if (siteInfo.pageTitle == '') { 
+         wtsh['page_name'] = 'home'; 
+      }
+      else {
+         wtsh['page_name'] = siteInfo.pageTitle;
+      }
+
+      var referer = siteInfo.referer || siteInfo.referrer;
+      if (referer == '') { 
+         wtsh['referer'] = 'wix_none'; 
+      }
+      else {
+         wtsh['referer'] = referer;
+      }
+      wtsh['test'] = 1;
+
+   }); 
+
+
+   if(wtsh['test'] != 1 && loop < 10) {
+    //  setTimeout(loadData, 75, loop, wtsh, function(wtsh) { printCode(wtsh); });
+      setTimeout(function(){loadData(loop, wtsh, function(wtsh) { printCode(wtsh); });},75);
+   }
+   else {
+
+     if(wtsh['test'] != 1){
+         wtsh['url'] = document.referrer;
+         wtsh['referer'] = 'wix_none';        // can not get if function above does not run
+         wtsh['page_name'] = 'n/a';           // can not get if function above does not run
+      }
+
+      callback(wtsh);
+
+   }
+}
+
+
+function printCode(wtsh) {
+
+   wtsh['invisible']='no';
+   wtsh['custom']='wix';
+   var wts=document.createElement('script');wts.type='text/javascript';wts.async=true;
+   wts.src=('https:'==document.location.protocol?'https://server2':'http://server2')
++'.web-stat.com/3/299779/log6.js';
+   document.getElementById('wts').appendChild(wts);
+}
+
+
+var wtsh = {};
+var loop = 0;
+loadData(loop, wtsh, function(wtsh) { printCode(wtsh); });
+
+</script>
+<noscript>
+&lt;a href="http://www.web-stat.net"&gt;&lt;img src="http://server2.web-stat.com/6/3/299779.gif" style="border:0px;" alt="hit counter"&gt;&lt;/a&gt;
+</noscript>
+
+	
+</body></html>
